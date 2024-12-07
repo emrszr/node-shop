@@ -12,6 +12,8 @@ const uri = 'mongodb+srv://node-shop:node-shop@node-rest-shop.dnhdu.mongodb.net/
 
 mongoose.connect(uri);
 
+// mongoose.Promise = global.Promise;  // for deprecated warning, it may not be required for current version
+
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
